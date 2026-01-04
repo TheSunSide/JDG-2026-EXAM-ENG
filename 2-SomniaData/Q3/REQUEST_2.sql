@@ -5,4 +5,9 @@
 --            intervention plans.
 -- ============================================================================
 
--- TODO: Write the SQL query here
+SELECT p.*, COUNT(CASE WHEN ip.priority = 'pending' THEN 1 END) AS pending_count
+FROM users u
+JOIN profiles p ON u.userId = p.userId
+JOIN interventionPlans ip ON p.profileId = ip.profileId
+WHERE u.userId = 42
+GROUP BY p.profileId;

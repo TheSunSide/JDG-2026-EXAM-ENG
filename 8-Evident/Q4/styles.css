@@ -1,20 +1,131 @@
-body{font-family:'Times New Roman', serif;color:#464646;margin:0;padding:0}
-header{padding:10px;display:flex;align-items:center;justify-content:space-between}
-header h1{font-size:20px;margin:0}
-nav button{margin-left:8px;background:transparent;border:1px solid #ccc;padding:4px}
-main{display:flex;gap:10px;padding:12px}
-#form-area{flex:2;padding:8px}
-#form-area h2{font-size:18px}
-#metrics{flex:1;padding:8px}
-#metrics h2{font-size:18px}
-#recommendations{flex:1;padding:8px}
-#recommendations h2{font-size:18px}
-label{display:block;margin-bottom:6px;font-size:12px;color:#777}
-#inspect-id{width:45%;padding:4px;margin-top:2px;font-size:12px}
-#material{width:78%;padding:4px;margin-top:2px;font-size:11px}
-#location{width:62%;padding:4px;margin-top:2px;font-size:13px}
-#notes{width:91%;padding:4px;margin-top:2px;font-size:12px;height:60px}
-.warning-text{font-size:10px;margin:4px 0 8px 0;font-style:italic}
-.actions{display:flex;justify-content:flex-end;gap:6px}
-button#cancel, button#submit{background:#d9d9d9;color:#333;border:2px solid #999;padding:8px 16px;font-size:14px;font-weight:bold}
-.card{background:#fafafa;padding:6px;margin-bottom:6px;font-size:11px}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Times New Roman", serif;
+  color: #464646;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  align-items: center;
+}
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+main {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+}
+#form-area {
+  font-size: 1rem;
+  padding: 8px;
+}
+#form-area label {
+  font-size: 1rem;
+}
+#metrics {
+  flex: 1;
+  padding: 8px;
+}
+#recommendations {
+  flex: 1;
+  padding: 8px;
+}
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.2em;
+  color: #777;
+}
+#inspect-id {
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 12px;
+}
+#material {
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 11px;
+}
+#location {
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 13px;
+}
+#notes {
+  width: 100%;
+  max-width: 730px;
+  padding: 4px;
+  margin-top: 2px;
+  font-size: 12px;
+  height: 60px;
+}
+.warning-text {
+  font-size: 0.9rem;
+  margin: 4px 0 8px 0;
+  font-style: italic;
+  font-weight: bold;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+}
+button#cancel,
+button#submit {
+  background: #d9d9d9;
+  color: #333;
+  border: 2px solid #999;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+button#cancel:hover,
+button#submit:hover {
+  transform: scale(1.1);
+  transition: ease-in 0.075s;
+}
+
+button#cancel {
+  background: #f1f0f0;
+  border: 2px solid #d3d0d0;
+  color: #333;
+}
+.card {
+  background: #fafafa;
+  padding: 6px;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  width: 80%;
+  border-top: 1px solid rgb(230, 230, 230);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}

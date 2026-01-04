@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Inspection prototype - Evident</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>InspectionApp v0.1</h1>
-    </header>
 
-    <main>
-      <section id="form-area">
-        <h2>New inspection</h2>
-        <form id="inspection-form">
-          <label>Inspection ID <input type="text" id="inspect-id" /></label>
-          <label
-            >Material
-            <select id="material">
-              <option>Steel</option>
-              <option>Aluminum</option>
-              <option>Composite</option>
-            </select></label
-          >
-          <label>Location <input type="text" id="location" /></label>
-          <label
-            >Notes<br />
-            <textarea id="notes"></textarea>
-          </label>
-          <label
-            ><input type="checkbox" id="has-anomaly" checked /> Anomaly
-            detected</label
-          >
-          <p class="warning-text">
-            By unchecking this box, you assume full responsibility in case of
-            any later issue.
-          </p>
-          <div class="actions">
-            <button type="button" id="cancel">Cancel</button>
-            <button type="submit" id="submit">Submit</button>
-          </div>
-        </form>
-      </section>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inspection prototype - Evident</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <section id="metrics">
-        <h2>Metrics</h2>
-        <div class="card">Inspections today: <span id="count">0</span></div>
-        <div class="card">Anomalies: <span id="issues">0</span></div>
-        <div class="card">Compliance rate: <span id="rate">100%</span></div>
-        <div class="card">Last inspection: <span id="last">-</span></div>
-      </section>
+<body>
+  <header>
+    <h1>InspectionApp v0.1</h1>
+  </header>
 
-      <section id="recommendations">
-        <h2>Recommendations</h2>
-        <ul id="reco-list">
-          <li>-- None --</li>
-        </ul>
-      </section>
-    </main>
+  <main>
+    <section id="form-area">
+      <h2>New inspection</h2>
+      <form id="inspection-form">
+        <label>Inspection ID <input type="text" id="inspect-id" required /></label>
+        <label>Material
+          <select id="material" required>
+            <option>Steel</option>
+            <option>Aluminum</option>
+            <option>Composite</option>
+          </select></label>
+        <label>Location <input type="text" id="location" required /></label>
+        <label>Notes<br />
+          <textarea id="notes"></textarea>
+        </label>
+        <label><input type="checkbox" id="has-anomaly" /> Anomaly
+          detected</label>
+        <p class="warning-text">
+          By unchecking this box, you assume full responsibility in case of
+          any later issue.
+        </p>
+        <div class="actions">
+          <button type="button" id="cancel">Cancel</button>
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+    <hr class="divider">
+    <section id="metrics">
+      <h2>Metrics</h2>
+      <div class="card">Inspections today: <span id="count">0</span></div>
+      <div class="card">Anomalies: <span id="issues">0</span></div>
+      <div class="card">Compliance rate: <span id="rate">100%</span></div>
+      <div class="card">Last inspection: <span id="last">-</span></div>
+    </section>
+    <hr class="divider">
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <ul id="reco-list">
+        <li>-- None --</li>
+      </ul>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

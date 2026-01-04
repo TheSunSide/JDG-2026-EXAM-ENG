@@ -5,4 +5,11 @@
 --            December 1st and January 1st, sorted chronologically by creation date
 -- ============================================================================
 
--- TODO: Write the SQL query here
+SELECT ip.*, p.*, u.*
+FROM interventionPlans ip 
+JOIN profiles p ON p.profileId = ip.profileId
+JOIN users u ON u.userId = p.userId
+GROUP BY ip.planId, p.profileId
+where MONTH(ip.creation) = 12 AND DAY(ip.creation) >= 1
+ORDER BY ip.creation asc;
+
